@@ -20,7 +20,7 @@ jobs:
       #   uses: actions/checkout@v6.0.2
         #continue-on-error: true
       - name: Greeting
-        run: echo "${{ github.event.inputs.infra_env }} Pipeline has been created by ${{ vars.NAME }} on ${{ RUNNER.OS }} Machine"
+        run: echo "${{ github.event.inputs.infra_env }} Pipeline has been created by ${{ vars.NAME }} on ${{ RUNNER.OS }} Machine";df -h
 
   # my_second_job:
   #   name: My second job
