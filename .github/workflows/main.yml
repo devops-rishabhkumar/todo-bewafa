@@ -9,8 +9,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6.0.2
+        continue-on-error: true
       - name: Greeting
         run: echo "Hello World"
+
+  my_second_job:
+    name: My second job
+    runs-on: windows-latest
+    needs: my_first_job
+    steps:
       - name: Greeting
-        run: echo "Hello World 2"
-      
+        run: write-host "Hello World"
