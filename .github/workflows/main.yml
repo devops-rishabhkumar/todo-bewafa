@@ -2,6 +2,9 @@ name: Hello World Workflow
 
 on: workflow_dispatch
 
+env:
+  NAME: Rishabh
+
 jobs:
   my_first_job:
     name: My first job
@@ -11,12 +14,12 @@ jobs:
         uses: actions/checkout@v6.0.2
         #continue-on-error: true
       - name: Greeting
-        run: echo "Hello World"
+        run: echo "Hello World from" $NAME
 
-  my_second_job:
-    name: My second job
-    runs-on: windows-latest
-    #needs: my_first_job
-    steps:
-      - name: Greeting
-        run: write-host "Hello World"
+  # my_second_job:
+  #   name: My second job
+  #   runs-on: windows-latest
+  #   #needs: my_first_job
+  #   steps:
+  #     - name: Greeting
+  #       run: write-host "Hello World"
