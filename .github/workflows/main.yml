@@ -1,0 +1,11 @@
+name: Hello World Workflow
+
+on: worlflow_dispatch
+
+jobs:
+  my_first_job:
+    name: My first job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: "Hello World"
