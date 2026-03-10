@@ -1,7 +1,12 @@
 name: Hello World Workflow
 
-on: workflow_dispatch
-
+on: 
+  workflow_dispatch: 
+    inputs:
+      infra_env:
+        description: 'Where'
+        type: string
+        default: dev
 
 jobs:
   my_first_job:
@@ -14,8 +19,8 @@ jobs:
       # - name: Checkout
       #   uses: actions/checkout@v6.0.2
         #continue-on-error: true
-      - name: Greeting $RUNNER_OS ${{ RUNNER.OS }}
-        run: echo "Hello World from ${{ vars.NAME }}!"
+      - name: Greeting
+        run: echo "${{ github.event.inputs.infra_env }} Pipeline has been created by ${{ vars.NAME }} on ${{ RUNNER.OS }} Machine"
 
   # my_second_job:
   #   name: My second job
