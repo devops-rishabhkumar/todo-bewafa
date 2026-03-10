@@ -11,7 +11,7 @@ on:
 jobs:
   my_first_job:
     name: My first job
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     # env:
     #   NAME: 'Rishabh Kumar Bhatnagar'
 
