@@ -14,7 +14,7 @@ jobs:
       # - name: Checkout
       #   uses: actions/checkout@v6.0.2
         #continue-on-error: true
-      - name: Greeting RUNNER_OS ${{ RUNNER.OS }}
+      - name: Greeting $RUNNER_OS ${{ RUNNER.OS }}
         run: echo "Hello World from ${{ vars.NAME }}!"
 
   # my_second_job:
