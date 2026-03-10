@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Greeting
-        run: "Hello World"
+        run: echo "Hello World"
